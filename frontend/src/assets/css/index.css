@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 210 15% 12%;
+    --card: 210 40% 98%;
+    --card-foreground: 210 15% 12%;
+    --popover: 210 40% 98%;
+    --popover-foreground: 210 15% 12%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 210 15% 12%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 214 32% 91%;
+    --accent-foreground: 210 15% 12%;
+    --destructive: 0 62% 54%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 213 31% 91%;
+    --card: 210 30% 8%;
+    --card-foreground: 213 31% 91%;
+    --popover: 210 30% 8%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 30% 8%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 65%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 213 31% 91%;
+    --destructive: 0 62% 54%;
+    --destructive-foreground: 213 31% 91%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Fin-tech 专用样式 */
+.fintech-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+.fintech-card {
+  @apply bg-white/80 backdrop-blur-sm border border-fintech-200/50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.fintech-btn-primary {
+  @apply bg-fintech-600 hover:bg-fintech-700 text-white font-medium px-4 py-2 rounded-md transition-colors;
+}
+
+.fintech-btn-secondary {
+  @apply bg-fintech-100 hover:bg-fintech-200 text-fintech-800 font-medium px-4 py-2 rounded-md transition-colors;
+}
+
+.chat-bubble-user {
+  @apply bg-fintech-600 text-white rounded-lg rounded-br-sm px-4 py-2 max-w-xs ml-auto;
+}
+
+.chat-bubble-ai {
+  @apply bg-white border border-fintech-200 rounded-lg rounded-bl-sm px-4 py-2 max-w-xs mr-auto;
+}
